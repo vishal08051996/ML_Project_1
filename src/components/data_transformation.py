@@ -11,11 +11,11 @@ from sklearn.preprocessing import StandardScaler,OneHotEncoder
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from src.utils import save_model
+from src.utils import save_model,evaluation_report
 
 
 from src.components.data_ingestion import DataIngestion,DataIngestionConfig
-
+from src.components.model_training import ModelConfig,ModelTrainer
 @dataclass
 class DataTransformationConfig:
     preproccessor_obj_path = os.path.join("artifact","preprocessor.pkl")
@@ -95,4 +95,13 @@ class DataTransformation:
             raise CustomException(e,sys)
     
 
+
+
+if __name__=="__main__":
+    data_ing = DataIngestion()
+    train_path,test_path = data_ing.initiate_data_ingestion()
+    data_transf = DataTransformation()
+    a,b,c = data_transf.Transformation(train_path,test_path)
+    model_tr = ModelTrainer()
+    report = model_tr.initiate_model_training(a,b)
 
