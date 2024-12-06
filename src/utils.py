@@ -14,6 +14,13 @@ def save_model(file_path,obj):
     except Exception as e:
         raise CustomException(e,sys)
     
+def load_model(file_path):
+    try:
+        with open(file_path,"rb") as f:
+            model = pickle.load(f)
+        return model        
+    except Exception as e:
+        raise CustomException(e,sys)
 
 def evaluation_report(xtrain,ytrain,xtest,ytest,model):
     report_list = []
