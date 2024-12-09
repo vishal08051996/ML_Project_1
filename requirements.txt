@@ -21,7 +21,7 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib==3.9.3
 mdurl==0.1.2
--e git+https://github.com/vishal08051996/ML_Project_1.git@ce34c11cc9db28be5c9144bf8cc6c82017696335#egg=ML_Project_1
+-e git+https://github.com/vishal08051996/ML_Project_1.git@3e9a58115cb3903d3e0dad479e80af8b5bd76d5f#egg=ML_Project_1
 narwhals==1.15.2
 numpy==1.26.4
 packaging==24.2
@@ -43,6 +43,7 @@ scipy==1.14.1
 six==1.16.0
 smmap==5.0.1
 streamlit==1.40.2
+streamlit-option-menu==0.4.0
 tenacity==9.0.0
 threadpoolctl==3.5.0
 toml==0.10.2
