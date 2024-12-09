@@ -43,7 +43,9 @@ if st.button("submit",use_container_width=True):
         # Make prediction
         pred = model.predict(feed)
         st.markdown("---")
+        st.markdown("---")
         st.write("Predicted Math Score:", round(pred[0], 2))
+        st.markdown("---")
         st.markdown("---")
     except Exception as e:
         raise CustomException(e,sys)
